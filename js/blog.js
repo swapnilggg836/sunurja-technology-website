@@ -227,7 +227,7 @@ const blogs = [
 
         title: "Understanding On-Grid, Off-Grid and Hybrid Systems",
 
-        image: "../assets/images/blog/solar-systems.jpg",
+        image: "../assets/images/blog/solar-systems.png",
 
         author: "SunUrja Team",
 
