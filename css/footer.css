@@ -30,13 +30,22 @@
     display: inline-flex;
     align-items: center;
     margin-bottom: 20px;
+    background: #ffffff;
+    padding: 6px 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.footer-logo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(87, 225, 87, 0.25);
 }
 
 .footer-logo-img {
-    height: 50px;
+    height: 48px;
     width: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1);
 }
 
 .footer-about>p {
