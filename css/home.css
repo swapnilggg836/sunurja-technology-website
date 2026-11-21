@@ -12,32 +12,53 @@
 .hero-section {
     position: relative;
     min-height: 680px;
-    height: 85vh;
-    max-height: 850px;
+    height: 88vh;
+    max-height: 880px;
 
     display: flex;
     align-items: center;
 
-    background:
-        linear-gradient(90deg,
-            rgba(9, 28, 16, 0.92) 0%,
-            rgba(9, 28, 16, 0.75) 48%,
-            rgba(9, 28, 16, 0.2) 100%),
-        url("../assets/images/home/solar-hero.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
+    background: #091c10;
     overflow: hidden;
+}
+
+/* Background Video Styling */
+.hero-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.85);
+    transform: scale(1.05);
+    animation: slowZoom 25s infinite alternate ease-in-out;
+}
+
+@keyframes slowZoom {
+    0% { transform: scale(1.02); }
+    100% { transform: scale(1.12); }
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg,
-            rgba(10, 25, 15, 0.3),
-            transparent 45%);
+    z-index: 2;
+    background: linear-gradient(90deg,
+            rgba(9, 28, 16, 0.94) 0%,
+            rgba(9, 28, 16, 0.82) 45%,
+            rgba(9, 28, 16, 0.45) 100%),
+        linear-gradient(0deg,
+            rgba(10, 25, 15, 0.6) 0%,
+            transparent 60%);
 }
 
 .hero-container {
@@ -162,13 +183,15 @@
 
 .intro-section {
     background: var(--white);
+    position: relative;
+    overflow: hidden;
 }
 
 .intro-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.05fr 0.95fr;
     align-items: center;
-    gap: 90px;
+    gap: 70px;
 }
 
 .intro-content h2 {
@@ -185,91 +208,101 @@
     margin-top: 15px;
 }
 
-.intro-highlight {
+/* Modern Photo + Floating Glass Card */
+.intro-visual-wrapper {
     position: relative;
-
-    padding: 55px 45px;
-
-    min-height: 330px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    background: var(--light-bg);
-    border: 1px solid var(--border);
-    border-radius: 25px;
-
-    overflow: hidden;
-}
-
-.intro-highlight::before {
-    content: "";
-
-    position: absolute;
-    width: 230px;
-    height: 230px;
-
-    right: -80px;
-    top: -80px;
-
-    background: var(--primary);
-    opacity: 0.12;
-
-    border-radius: 50%;
-}
-
-.highlight-icon {
-    width: 75px;
-    height: 75px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: var(--primary);
-    color: var(--secondary);
-
-    border-radius: 20px;
-    font-size: 34px;
-
-    margin-bottom: 25px;
 }
 
-.intro-highlight h3 {
-    font-size: 27px;
+.intro-image-card {
+    width: 100%;
+    height: 420px;
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 45px rgba(20, 43, 27, 0.12);
+}
+
+.intro-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.intro-visual-wrapper:hover .intro-img {
+    transform: scale(1.06);
+}
+
+.intro-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(9, 28, 16, 0.6) 100%);
+}
+
+.intro-highlight-floating {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    max-width: 340px;
+    padding: 30px 25px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 15px 35px rgba(20, 43, 27, 0.15);
+    transition: transform 0.4s ease;
+}
+
+.intro-visual-wrapper:hover .intro-highlight-floating {
+    transform: translateY(-8px);
+}
+
+.highlight-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: 16px;
+    font-size: 26px;
     margin-bottom: 15px;
 }
 
-.intro-highlight>p {
+.intro-highlight-floating h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.intro-highlight-floating p {
     color: var(--muted);
-    line-height: 1.8;
-    max-width: 400px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 12px;
 }
 
 .highlight-bottom {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 20px;
+    gap: 8px;
 }
 
 .highlight-bottom span {
-    padding: 8px 14px;
-
-    background: var(--white);
+    padding: 5px 12px;
+    background: var(--primary-light);
     color: var(--secondary);
-
-    border: 1px solid var(--border);
     border-radius: 30px;
-
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
 }
 
 
 /* =========================================
-   3. SOLUTIONS SECTION
+   3. SOLUTIONS SECTION (WITH RICH HOVER IMAGERY)
    ========================================= */
 
 .solutions-section {
@@ -279,93 +312,126 @@
 .solutions-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 28px;
 }
 
 .solution-card {
     position: relative;
-
-    padding: 38px 30px;
-
+    border-radius: 24px;
+    overflow: hidden;
     background: var(--white);
     border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
 
-    transition: var(--transition);
+.solution-card-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 220px;
     overflow: hidden;
+}
+
+.solution-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.solution-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(9, 28, 16, 0.1) 0%, rgba(9, 28, 16, 0.7) 100%);
+    transition: background 0.4s ease;
+}
+
+.solution-card:hover .solution-bg-img {
+    transform: scale(1.1);
+}
+
+.solution-card:hover .solution-img-overlay {
+    background: linear-gradient(180deg, rgba(87, 225, 87, 0.15) 0%, rgba(9, 28, 16, 0.8) 100%);
 }
 
 .solution-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 40px rgba(20, 43, 27, 0.12), 0 0 25px rgba(87, 225, 87, 0.2);
     border-color: var(--primary);
 }
 
-.solution-icon {
-    width: 65px;
-    height: 65px;
+.solution-card-content {
+    padding: 30px 28px 32px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 
+.solution-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.solution-icon {
+    width: 58px;
+    height: 58px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: var(--primary-light);
     color: var(--primary-dark);
-
-    border-radius: 17px;
-    font-size: 28px;
-
-    margin-bottom: 28px;
-    transition: var(--transition);
+    border-radius: 16px;
+    font-size: 24px;
+    transition: all 0.3s ease;
 }
 
 .solution-card:hover .solution-icon {
     background: var(--primary);
     color: var(--secondary);
-    transform: rotate(-5deg);
+    transform: rotate(-6deg) scale(1.08);
 }
 
 .solution-number {
-    position: absolute;
-    top: 35px;
-    right: 30px;
-
-    color: #e9eee9;
     font-family: var(--font-heading);
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 800;
+    color: rgba(20, 43, 27, 0.12);
 }
 
 .solution-card h3 {
-    font-size: 23px;
-    margin-bottom: 15px;
+    font-size: 22px;
+    margin-bottom: 12px;
 }
 
-.solution-card>p {
+.solution-card p {
     color: var(--muted);
     font-size: 14px;
-    line-height: 1.9;
-    margin-bottom: 25px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    flex: 1;
 }
 
 .card-link {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-
     color: var(--primary-dark);
     font-size: 14px;
     font-weight: 700;
 }
 
 .card-link i {
-    transition: var(--transition);
+    transition: transform 0.3s ease;
 }
 
-.card-link:hover i {
-    transform: translateX(6px);
+.solution-card:hover .card-link i {
+    transform: translateX(8px);
 }
 
+/* Featured Commercial Card Variant */
 .featured-card {
     background: var(--secondary);
     border-color: var(--secondary);
@@ -375,16 +441,16 @@
     color: var(--white);
 }
 
-.featured-card>p {
+.featured-card p {
     color: rgba(255, 255, 255, 0.7);
 }
 
 .featured-card .solution-number {
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.15);
 }
 
 .featured-card .solution-icon {
-    background: rgba(87, 225, 87, 0.15);
+    background: rgba(87, 225, 87, 0.18);
     color: var(--primary);
 }
 
@@ -460,91 +526,127 @@
 }
 
 
-/* Why visual */
-
-.why-visual {
-    position: relative;
-
-    min-height: 430px;
-
+/* Stats counter styling */
+.stats-row {
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    background:
-        linear-gradient(135deg,
-            rgba(87, 225, 87, 0.12),
-            rgba(20, 43, 27, 0.08));
-
-    border-radius: 30px;
+    gap: 32px;
+    margin-bottom: 35px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
 }
 
-.why-main-card {
-    width: 75%;
-    min-height: 300px;
-
-    padding: 45px 30px;
-
+.stat-item {
     display: flex;
     flex-direction: column;
+}
+
+.stat-number {
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--primary-dark);
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    margin: 0;
+}
+
+/* Why visual with actual photo and glowing overlay */
+.why-visual {
+    position: relative;
+    min-height: 480px;
+    display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.why-image-card {
+    width: 88%;
+    height: 420px;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(20, 43, 27, 0.2);
+}
+
+.why-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.why-visual:hover .why-main-img {
+    transform: scale(1.08);
+}
+
+.why-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(9, 28, 16, 0.2) 0%, rgba(9, 28, 16, 0.85) 100%);
+}
+
+.why-overlay-info {
+    position: absolute;
+    bottom: 35px;
+    left: 30px;
+    right: 30px;
     text-align: center;
-
-    background: var(--secondary);
-    border-radius: 25px;
-
-    box-shadow: var(--shadow-lg);
-}
-
-.why-main-card>i {
-    font-size: 75px;
-    color: var(--primary);
-    margin-bottom: 25px;
-}
-
-.why-main-card h3 {
     color: var(--white);
-    font-size: 27px;
-    margin-bottom: 15px;
+    z-index: 2;
 }
 
-.why-main-card p {
-    color: rgba(255, 255, 255, 0.7);
+.why-overlay-info i {
+    font-size: 45px;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.why-overlay-info h3 {
+    color: var(--white);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.why-overlay-info p {
+    color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
     margin: 0;
 }
 
 .floating-card {
     position: absolute;
-    bottom: 25px;
-    right: -20px;
-
+    bottom: 10px;
+    right: -15px;
     display: flex;
     align-items: center;
     gap: 15px;
-
-    padding: 17px 22px;
-
-    background: var(--white);
-    border-radius: 14px;
-
-    box-shadow: var(--shadow-md);
+    padding: 18px 25px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    z-index: 3;
+    transition: transform 0.4s ease;
 }
 
-.floating-card>i {
-    width: 42px;
-    height: 42px;
+.why-visual:hover .floating-card {
+    transform: translateY(-8px);
+}
 
+.floating-card i {
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: var(--primary-light);
-    color: var(--primary-dark);
-
+    background: var(--primary);
+    color: var(--secondary);
     border-radius: 50%;
-    font-size: 19px;
+    font-size: 20px;
 }
 
 .floating-card h4 {
@@ -560,71 +662,81 @@
 
 
 /* =========================================
-   5. PROCESS SECTION
+   5. PROCESS SECTION (WITH TIMELINE LINE)
    ========================================= */
 
 .process-section {
     background: var(--light-bg);
 }
 
+.process-timeline-container {
+    position: relative;
+}
+
+.process-line-progress {
+    position: absolute;
+    top: 60px;
+    left: 5%;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+    box-shadow: 0 0 12px rgba(87, 225, 87, 0.6);
+    transition: width 0.3s ease-out;
+    z-index: 1;
+}
+
 .process-grid {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 24px;
 }
 
 .process-card {
     position: relative;
-
-    padding: 35px 25px;
-
+    padding: 38px 25px;
     background: var(--white);
     border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-
+    border-radius: 20px;
     text-align: center;
-
-    transition: var(--transition);
+    transition: all 0.4s ease;
 }
 
 .process-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(20, 43, 27, 0.1);
+    border-color: var(--primary);
 }
 
 .process-number {
     position: absolute;
     top: 15px;
     right: 18px;
-
     color: #e5eee5;
-    font-size: 27px;
+    font-size: 26px;
     font-weight: 800;
 }
 
 .process-icon {
     width: 75px;
     height: 75px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: var(--primary-light);
     color: var(--primary-dark);
-
     border-radius: 50%;
-    font-size: 28px;
-
-    margin: 0 auto 25px;
-
-    transition: var(--transition);
+    font-size: 26px;
+    margin: 0 auto 22px;
+    transition: all 0.4s ease;
 }
 
 .process-card:hover .process-icon {
     background: var(--primary);
     color: var(--secondary);
-    transform: scale(1.08);
+    transform: scale(1.12) rotate(8deg);
+    box-shadow: 0 0 20px rgba(87, 225, 87, 0.4);
 }
 
 .process-card h3 {
@@ -715,21 +827,73 @@
 
 
 /* =========================================
-   7. ANIMATIONS
+   7. SCROLL & DYNAMIC ANIMATIONS
    ========================================= */
 
-@keyframes heroFadeUp {
+/* Entrance transition states */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
 
-    from {
-        opacity: 0;
-        transform: translateY(35px);
+.animate-on-scroll[data-animation="fade-up"] {
+    transform: translateY(40px);
+}
+
+.animate-on-scroll[data-animation="fade-down"] {
+    transform: translateY(-40px);
+}
+
+.animate-on-scroll[data-animation="fade-right"] {
+    transform: translateX(-40px);
+}
+
+.animate-on-scroll[data-animation="fade-left"] {
+    transform: translateX(40px);
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Pulse animation for primary hero button & icons */
+.pulse-btn {
+    box-shadow: 0 0 0 0 rgba(87, 225, 87, 0.7);
+    animation: buttonPulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes buttonPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(87, 225, 87, 0.7);
     }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    70% {
+        box-shadow: 0 0 0 16px rgba(87, 225, 87, 0);
     }
+    100% {
+        box-shadow: 0 0 0 0 rgba(87, 225, 87, 0);
+    }
+}
 
+.pulse-icon {
+    animation: iconFloat 3s infinite ease-in-out;
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-6px) scale(1.08);
+    }
+}
+
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 

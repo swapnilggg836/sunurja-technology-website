@@ -12,9 +12,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     if (!navbarContainer) return;
 
     // Detect whether current page is inside pages/
-    const isInsidePages = window.location.pathname
-        .split("/")
-        .includes("pages");
+    const pathname = window.location.pathname.replace(/\\/g, "/");
+    const isInsidePages = pathname.includes("/pages/") || pathname.split("/").includes("pages");
 
     const rootPath = isInsidePages ? "../" : "";
 
@@ -54,6 +53,18 @@ function initializeNavbar(rootPath) {
 
     if (!header || !menuToggle || !navbarMenu) return;
 
+
+    // ---------- UPDATE NAVBAR LOGO ----------
+
+    const navbarLogo = document.querySelector(".navbar-logo");
+    if (navbarLogo) {
+        navbarLogo.href = rootPath + "index.html";
+    }
+
+    const navbarLogoImg = document.querySelector(".navbar-logo-img");
+    if (navbarLogoImg) {
+        navbarLogoImg.src = rootPath + "assets/images/nav/logo.jpeg";
+    }
 
     // ---------- NAVIGATION PATHS ----------
 
