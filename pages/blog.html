@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Solar Insights & Knowledge | SunUrja Technologies</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Blog CSS -->
+    <link rel="stylesheet" href="../css/blog.css">
+
+</head>
+
+<body>
+
+    <!-- BLOG HERO SECTION -->
+    <section class="blog-hero">
+
+        <div class="blog-hero-overlay"></div>
+
+        <div class="blog-hero-content">
+
+            <span class="hero-label">SUNURJA TECHNOLOGIES</span>
+
+            <h1>Solar Insights & Knowledge</h1>
+
+            <p>
+                Stay informed about solar technology, renewable energy
+                developments and smarter ways to use electricity.
+            </p>
+
+            <a href="#blog-section" class="hero-btn">
+                Explore Articles
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- BLOG MAIN SECTION -->
+    <main class="blog-main" id="blog-section">
+
+        <div class="blog-container">
+
+            <!-- SECTION HEADING -->
+            <div class="blog-heading">
+
+                <span class="section-label">OUR LATEST UPDATES</span>
+
+                <h2>Explore Our Articles</h2>
+
+                <p>
+                    Discover useful information, expert insights and
+                    practical tips to make the most of solar energy.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH BAR -->
+            <div class="blog-search">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="search"
+                    id="blogSearch"
+                    placeholder="Search solar articles..."
+                    aria-label="Search solar articles">
+
+                <button type="button" id="clearSearch">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <!-- CATEGORY FILTERS -->
+            <div class="blog-filters">
+
+                <button class="filter-btn active" data-category="All">
+                    All Articles
+                </button>
+
+                <button class="filter-btn" data-category="Solar News">
+                    Solar News
+                </button>
+
+                <button class="filter-btn" data-category="Installation Guides">
+                    Installation Guides
+                </button>
+
+                <button class="filter-btn" data-category="Energy Saving Tips">
+                    Energy Saving Tips
+                </button>
+
+            </div>
+
+
+            <!-- BLOG COUNT -->
+            <div class="blog-results">
+
+                <h3>Latest Articles</h3>
+
+                <p id="blogCount">Showing 6 articles</p>
+
+            </div>
+
+
+            <!-- BLOG CARDS GENERATED USING JAVASCRIPT -->
+            <div class="blog-grid" id="blogGrid">
+
+                <!-- Blog cards will appear here through blog.js -->
+
+            </div>
+
+
+            <!-- NO RESULTS MESSAGE -->
+            <div class="no-results" id="noResults" hidden>
+
+                <div class="no-results-icon">☀</div>
+
+                <h3>No Articles Found</h3>
+
+                <p>
+                    We couldn't find any articles matching your search.
+                    Try another keyword or category.
+                </p>
+
+                <button type="button" id="resetFilters">
+                    View All Articles
+                </button>
+
+            </div>
+
+
+            <!-- RELATED ARTICLES SECTION -->
+            <section class="related-section">
+
+                <div class="related-heading">
+
+                    <span class="section-label">KEEP EXPLORING</span>
+
+                    <h2>Explore More About Solar Energy</h2>
+
+                    <p>
+                        Learn more about renewable energy and discover
+                        smarter ways to build a sustainable future.
+                    </p>
+
+                </div>
+
+                <div class="related-grid">
+
+                    <div class="related-card">
+                        <span>01</span>
+                        <h3>Solar Technology</h3>
+                        <p>
+                            Understand modern solar technologies
+                            and their applications.
+                        </p>
+                    </div>
+
+                    <div class="related-card">
+                        <span>02</span>
+                        <h3>Energy Efficiency</h3>
+                        <p>
+                            Discover ways to improve energy usage
+                            and reduce electricity consumption.
+                        </p>
+                    </div>
+
+                    <div class="related-card">
+                        <span>03</span>
+                        <h3>Sustainable Future</h3>
+                        <p>
+                            Explore how renewable energy supports
+                            environmental sustainability.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- BLOG JAVASCRIPT -->
+    <script src="../js/blog.js"></script>
+
+</body>
+
+</html>
