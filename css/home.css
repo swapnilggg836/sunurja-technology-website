@@ -423,39 +423,22 @@
     font-weight: 700;
 }
 
+/* Card Link */
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-dark);
+    font-size: 14px;
+    font-weight: 700;
+}
+
 .card-link i {
     transition: transform 0.3s ease;
 }
 
 .solution-card:hover .card-link i {
     transform: translateX(8px);
-}
-
-/* Featured Commercial Card Variant */
-.featured-card {
-    background: var(--secondary);
-    border-color: var(--secondary);
-}
-
-.featured-card h3 {
-    color: var(--white);
-}
-
-.featured-card p {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.featured-card .solution-number {
-    color: rgba(255, 255, 255, 0.15);
-}
-
-.featured-card .solution-icon {
-    background: rgba(87, 225, 87, 0.18);
-    color: var(--primary);
-}
-
-.featured-card .card-link {
-    color: var(--primary);
 }
 
 
