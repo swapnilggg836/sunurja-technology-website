@@ -8,28 +8,60 @@
 
     <title>Solar Insights & Knowledge | SunUrja Technologies</title>
 
+    <meta name="description"
+        content="Explore solar energy news, installation guides and energy-saving tips from SunUrja Technologies. Discover smarter ways to use renewable energy.">
+
+    <meta name="keywords"
+        content="Solar Energy, Solar News, Solar Installation Guides, Energy Saving Tips, SunUrja Technologies">
+
+    <meta name="author" content="SunUrja Technologies">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Blog CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- NAVBAR CSS -->
+    <link rel="stylesheet" href="../css/navbar.css">
+
+    <!-- FOOTER CSS -->
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- BLOG CSS -->
     <link rel="stylesheet" href="../css/blog.css">
+
+    <!-- RESPONSIVE CSS -->
+    <link rel="stylesheet" href="../css/responsive.css">
 
 </head>
 
 <body>
 
+    <!-- COMMON NAVBAR -->
+    <div id="navbar"></div>
+
+
     <!-- BLOG HERO SECTION -->
+
     <section class="blog-hero">
 
         <div class="blog-hero-overlay"></div>
 
         <div class="blog-hero-content">
 
-            <span class="hero-label">SUNURJA TECHNOLOGIES</span>
+            <span class="hero-label">
+                SUNURJA TECHNOLOGIES
+            </span>
 
             <h1>Solar Insights & Knowledge</h1>
 
@@ -49,14 +81,18 @@
 
 
     <!-- BLOG MAIN SECTION -->
+
     <main class="blog-main" id="blog-section">
 
         <div class="blog-container">
 
             <!-- SECTION HEADING -->
+
             <div class="blog-heading">
 
-                <span class="section-label">OUR LATEST UPDATES</span>
+                <span class="section-label">
+                    OUR LATEST UPDATES
+                </span>
 
                 <h2>Explore Our Articles</h2>
 
@@ -69,9 +105,13 @@
 
 
             <!-- SEARCH BAR -->
+
             <div class="blog-search">
 
-                <span class="search-icon">⌕</span>
+                <label for="blogSearch" class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"
+                        aria-hidden="true"></i>
+                </label>
 
                 <input
                     type="search"
@@ -87,49 +127,75 @@
 
 
             <!-- CATEGORY FILTERS -->
-            <div class="blog-filters">
 
-                <button class="filter-btn active" data-category="All">
+            <div class="blog-filters"
+                aria-label="Filter articles by category">
+
+                <button
+                    type="button"
+                    class="filter-btn active"
+                    data-category="All"
+                    aria-pressed="true">
                     All Articles
                 </button>
 
-                <button class="filter-btn" data-category="Solar News">
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-category="Solar News"
+                    aria-pressed="false">
                     Solar News
                 </button>
 
-                <button class="filter-btn" data-category="Installation Guides">
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-category="Installation Guides"
+                    aria-pressed="false">
                     Installation Guides
                 </button>
 
-                <button class="filter-btn" data-category="Energy Saving Tips">
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-category="Energy Saving Tips"
+                    aria-pressed="false">
                     Energy Saving Tips
                 </button>
 
             </div>
 
 
-            <!-- BLOG COUNT -->
+            <!-- BLOG RESULTS -->
+
             <div class="blog-results">
 
                 <h3>Latest Articles</h3>
 
-                <p id="blogCount">Showing 6 articles</p>
+                <p id="blogCount" aria-live="polite">
+                    Showing 6 articles
+                </p>
 
             </div>
 
 
-            <!-- BLOG CARDS GENERATED USING JAVASCRIPT -->
+            <!-- BLOG CARDS -->
+
             <div class="blog-grid" id="blogGrid">
 
-                <!-- Blog cards will appear here through blog.js -->
+                <!-- Blog cards generated dynamically using blog.js -->
 
             </div>
 
 
-            <!-- NO RESULTS MESSAGE -->
+            <!-- NO RESULTS -->
+
             <div class="no-results" id="noResults" hidden>
 
-                <div class="no-results-icon">☀</div>
+                <div class="no-results-icon">
+                    <i class="fa-solid fa-sun"
+                        aria-hidden="true"></i>
+                </div>
 
                 <h3>No Articles Found</h3>
 
@@ -145,12 +211,15 @@
             </div>
 
 
-            <!-- RELATED ARTICLES SECTION -->
+            <!-- RELATED SECTION -->
+
             <section class="related-section">
 
                 <div class="related-heading">
 
-                    <span class="section-label">KEEP EXPLORING</span>
+                    <span class="section-label">
+                        KEEP EXPLORING
+                    </span>
 
                     <h2>Explore More About Solar Energy</h2>
 
@@ -161,33 +230,48 @@
 
                 </div>
 
+
                 <div class="related-grid">
 
                     <div class="related-card">
+
                         <span>01</span>
+
                         <h3>Solar Technology</h3>
+
                         <p>
                             Understand modern solar technologies
                             and their applications.
                         </p>
+
                     </div>
 
+
                     <div class="related-card">
+
                         <span>02</span>
+
                         <h3>Energy Efficiency</h3>
+
                         <p>
                             Discover ways to improve energy usage
                             and reduce electricity consumption.
                         </p>
+
                     </div>
 
+
                     <div class="related-card">
+
                         <span>03</span>
+
                         <h3>Sustainable Future</h3>
+
                         <p>
                             Explore how renewable energy supports
                             environmental sustainability.
                         </p>
+
                     </div>
 
                 </div>
@@ -199,7 +283,17 @@
     </main>
 
 
-    <!-- BLOG JAVASCRIPT -->
+    <!-- COMMON FOOTER -->
+
+    <div id="footer"></div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/navbar.js"></script>
+
+    <script src="../js/footer.js"></script>
+
     <script src="../js/blog.js"></script>
 
 </body>

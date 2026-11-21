@@ -3,144 +3,234 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Blog Details | SunUrja Technologies</title>
 
     <meta name="description"
-        content="Explore solar energy insights, installation guides and renewable energy tips from SunUrja Technologies.">
+        content="Explore detailed solar energy articles, installation guides and renewable energy insights from SunUrja Technologies.">
+
+    <meta name="author" content="SunUrja Technologies">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Common Blog CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- NAVBAR CSS -->
+    <link rel="stylesheet" href="../css/navbar.css">
+
+    <!-- FOOTER CSS -->
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- BLOG CSS -->
     <link rel="stylesheet" href="../css/blog.css">
+
+    <!-- RESPONSIVE CSS -->
+    <link rel="stylesheet" href="../css/responsive.css">
 
 </head>
 
 <body>
 
-    <!-- BLOG DETAILS MAIN SECTION -->
-    <main class="blog-details-page">
+    <!-- COMMON NAVBAR -->
 
-        <div class="details-container">
-
-            <!-- BREADCRUMB -->
-            <nav class="blog-breadcrumb" aria-label="Breadcrumb">
-
-                <a href="../index.html">Home</a>
-
-                <span>/</span>
-
-                <a href="blog.html">Blog</a>
-
-                <span>/</span>
-
-                <span id="breadcrumbTitle">Article</span>
-
-            </nav>
+    <div id="navbar"></div>
 
 
-            <!-- ARTICLE HEADER -->
-            <header class="article-header">
+    <!-- ARTICLE BREADCRUMB -->
 
-                <span class="article-category" id="articleCategory">
-                    Installation Guides
+    <section class="details-breadcrumb">
+
+        <div class="blog-container">
+
+            <div class="breadcrumb-content">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+                <span id="breadcrumbTitle">
+                    Blog Details
                 </span>
-
-                <h1 id="articleTitle">
-                    Loading Article...
-                </h1>
-
-                <p class="article-subtitle" id="articleSubtitle">
-                    Discover useful solar energy information.
-                </p>
-
-
-                <!-- ARTICLE META -->
-                <div class="article-meta">
-
-                    <div class="meta-item">
-
-                        <img
-                            src="../assets/icons/user.svg"
-                            alt=""
-                        >
-
-                        <span id="articleAuthor">SunUrja Team</span>
-
-                    </div>
-
-
-                    <div class="meta-item">
-
-                        <img
-                            src="../assets/icons/calendar.svg"
-                            alt=""
-                        >
-
-                        <span id="articleDate">Date</span>
-
-                    </div>
-
-
-                    <div class="meta-item">
-
-                        <img
-                            src="../assets/icons/clock.svg"
-                            alt=""
-                        >
-
-                        <span id="articleReadingTime">5 min read</span>
-
-                    </div>
-
-                </div>
-
-            </header>
-
-
-            <!-- FEATURED IMAGE -->
-            <div class="article-featured-image">
-
-                <img
-                    id="articleImage"
-                    src="../assets/images/blog/solar-electricity.jpg"
-                    alt="Solar energy article featured image"
-                >
 
             </div>
 
+        </div>
 
-            <!-- ARTICLE CONTENT LAYOUT -->
+    </section>
+
+
+    <!-- BLOG DETAILS MAIN -->
+
+    <main class="blog-details-main">
+
+        <div class="blog-container">
+
             <div class="article-layout">
 
 
                 <!-- MAIN ARTICLE -->
-                <article class="article-content" id="articleContent">
 
-                    <!-- Content generated dynamically using JavaScript -->
+                <article class="article-main">
+
+
+                    <!-- ARTICLE HEADER -->
+
+                    <div class="article-header">
+
+                        <span class="article-category"
+                            id="articleCategory">
+                            Solar Energy
+                        </span>
+
+                        <h1 id="articleTitle">
+                            Loading Article...
+                        </h1>
+
+                        <p class="article-subtitle"
+                            id="articleSubtitle">
+                            Discover the latest insights about solar energy.
+                        </p>
+
+
+                        <!-- ARTICLE META -->
+
+                        <div class="article-meta">
+
+                            <div class="meta-item">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <span id="articleAuthor">
+                                    SunUrja Team
+                                </span>
+
+                            </div>
+
+
+                            <div class="meta-item">
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                <span id="articleDate">
+                                    Published Date
+                                </span>
+
+                            </div>
+
+
+                            <div class="meta-item">
+
+                                <i class="fa-regular fa-clock"></i>
+
+                                <span id="articleReadingTime">
+                                    5 min read
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FEATURED IMAGE -->
+
+                    <div class="article-featured-image">
+
+                        <img
+                            src="../assets/images/blog/solar-electricity.jpg"
+                            id="articleImage"
+                            alt="Solar energy article featured image">
+
+                    </div>
+
+
+                    <!-- ARTICLE CONTENT -->
+
+                    <div class="article-content"
+                        id="articleContent">
+
+                        <!-- Dynamic article content -->
+
+                    </div>
+
+
+                    <!-- ARTICLE BOTTOM CTA -->
+
+                    <section class="article-bottom-cta">
+
+                        <div class="article-cta-content">
+
+                            <span>POWER A SUSTAINABLE FUTURE</span>
+
+                            <h2>
+                                Ready to Make the Switch to Solar Energy?
+                            </h2>
+
+                            <p>
+                                Explore reliable solar solutions and take
+                                the next step towards smarter energy usage.
+                            </p>
+
+                            <a href="contact.html"
+                                class="article-cta-btn">
+
+                                Contact Our Team
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </section>
+
 
                 </article>
 
 
                 <!-- ARTICLE SIDEBAR -->
+
                 <aside class="article-sidebar">
 
 
                     <!-- TABLE OF CONTENTS -->
-                    <div class="sidebar-card">
 
-                        <h3>In This Article</h3>
+                    <div class="sidebar-card contents-card">
+
+                        <div class="sidebar-heading">
+
+                            <i class="fa-solid fa-list"></i>
+
+                            <h3>Table of Contents</h3>
+
+                        </div>
 
                         <ul id="articleContents">
 
-                            <!-- Generated dynamically -->
+                            <!-- Generated using blog-details.js -->
 
                         </ul>
 
@@ -148,119 +238,104 @@
 
 
                     <!-- KEY TAKEAWAYS -->
+
                     <div class="sidebar-card takeaway-card">
 
-                        <div class="takeaway-icon">☀</div>
+                        <div class="sidebar-heading">
 
-                        <h3>Key Takeaways</h3>
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                            <h3>Key Takeaways</h3>
+
+                        </div>
 
                         <ul id="keyTakeaways">
 
-                            <!-- Generated dynamically -->
+                            <!-- Generated using blog-details.js -->
 
                         </ul>
 
                     </div>
 
 
-                    <!-- CTA SIDEBAR -->
+                    <!-- SIDEBAR CTA -->
+
                     <div class="sidebar-cta">
 
-                        <span>POWER A BETTER FUTURE</span>
+                        <div class="sidebar-sun-icon">
 
-                        <h3>Ready to Go Solar?</h3>
+                            <i class="fa-solid fa-sun"></i>
+
+                        </div>
+
+                        <h3>Go Solar. Go Sustainable.</h3>
 
                         <p>
-                            Explore smarter solar energy solutions
-                            with SunUrja Technologies.
+                            Discover solar solutions for your
+                            home and business.
                         </p>
 
-                        <a href="../index.html#contact">
-                            Get Started →
+                        <a href="contact.html">
+                            Get in Touch →
                         </a>
 
                     </div>
+
 
                 </aside>
 
             </div>
 
 
-            <!-- ARTICLE BOTTOM CTA -->
-            <section class="article-bottom-cta">
-
-                <div class="bottom-cta-content">
-
-                    <span>MAKE THE SMART ENERGY CHOICE</span>
-
-                    <h2>Let's Build a Cleaner, Greener Future Together.</h2>
-
-                    <p>
-                        Discover how solar energy can support your
-                        home or business with reliable and sustainable
-                        energy solutions.
-                    </p>
-
-                    <a href="../index.html#contact" class="details-cta-btn">
-                        Get a Free Consultation →
-                    </a>
-
-                </div>
-
-                <div class="bottom-cta-decoration">
-                    ☀
-                </div>
-
-            </section>
-
-
             <!-- RELATED ARTICLES -->
+
             <section class="details-related-section">
 
                 <div class="details-related-heading">
 
-                    <div>
-                        <span class="section-label">CONTINUE READING</span>
+                    <span class="section-label">
+                        CONTINUE READING
+                    </span>
 
-                        <h2>Related Articles</h2>
+                    <h2>Related Articles</h2>
 
-                        <p>
-                            Explore more insights and learn something
-                            new about solar energy.
-                        </p>
-                    </div>
-
-                    <a href="blog.html" class="view-all-blogs">
-                        View All Articles →
-                    </a>
+                    <p>
+                        Explore more useful insights, guides and
+                        updates from the world of solar energy.
+                    </p>
 
                 </div>
 
 
-                <div class="details-related-grid" id="relatedArticles">
+                <div class="details-related-grid"
+                    id="relatedArticles">
 
-                    <!-- Related cards generated dynamically -->
+                    <!-- Related articles generated using JavaScript -->
 
                 </div>
 
             </section>
 
-
-            <!-- BACK TO BLOG -->
-            <div class="back-to-blog">
-
-                <a href="blog.html">
-                    ← Back to All Articles
-                </a>
-
-            </div>
 
         </div>
 
     </main>
 
 
-    <!-- BLOG DETAILS JAVASCRIPT -->
+    <!-- COMMON FOOTER -->
+
+    <div id="footer"></div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/navbar.js"></script>
+
+    <script src="../js/footer.js"></script>
+
+    <!-- Load article data before details functionality -->
+    <script src="../js/blog.js"></script>
+
     <script src="../js/blog-details.js"></script>
 
 </body>
