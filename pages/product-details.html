@@ -4,32 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details | Sunurja Technology</title>
-    <link rel="stylesheet" href="../css/product-details.css">
+
     <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
-            rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-        <!-- CSS Files -->
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/navbar.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/home.css">
-        <link rel="stylesheet" href="../css/responsive.css">
-
-        <!-- Font Awesome Icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/product-details.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
-     <!-- Navbar Component -->
-        <div id="navbar"></div>
-    <div class="box1" id="solar-panel">
-        <div class="box2">
-           <h1>Solar Panels</h1>
-           <h2>Types of Solar Panels</h2>
+    <!-- Navbar Component -->
+    <div id="navbar"></div>
+
+    <main>
+        <!-- Hero Banner -->
+        <section class="details-hero">
+            <div class="container details-hero-content">
+                <span class="section-label">TECHNICAL SPECIFICATIONS</span>
+                <h1>Product <span>Technical Overview</span></h1>
+                <p>Comprehensive engineering details, parameters, technical specifications, and warranty terms for our certified solar energy equipment.</p>
+            </div>
+        </section>
+
+        <!-- Sticky Quick Jump Sub-Navigation -->
+        <nav class="product-nav-bar">
+            <div class="container">
+                <div class="product-nav-list">
+                    <a href="#solar-panel" class="product-nav-link active"><i class="fa-solid fa-solar-panel"></i> Solar Panels</a>
+                    <a href="#solar-inverter" class="product-nav-link"><i class="fa-solid fa-bolt"></i> Solar Inverters</a>
+                    <a href="#solar-battery" class="product-nav-link"><i class="fa-solid fa-car-battery"></i> Solar Batteries</a>
+                    <a href="#solar-water-heater" class="product-nav-link"><i class="fa-solid fa-temperature-arrow-up"></i> Water Heaters</a>
+                    <a href="#solar-accessory" class="product-nav-link"><i class="fa-solid fa-screwdriver-wrench"></i> Accessories</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="details-container">
+            <div class="container">
+    <section class="product-detail-section" id="solar-panel">
+    <div class="product-detail-header">
+        <h2><i class="fa-solid fa-solar-panel"></i> Solar Panels</h2>
+        <span class="category-tag">Photovoltaic Modules</span>
+    </div>
+    <p class="section-intro">High-efficiency solar photovoltaic panels engineered to capture maximum sunlight and convert it into clean DC power for homes, commercial establishments, and solar farms.</p>
+    <h3>Types of Solar Panels</h3>
+    <div class="types-grid">
+        <div class="type-card">
            <h3>1. Monocrystalline Solar Panel</h3>
            <ul>
             <li>Made from a single silicon crystal.</li>
@@ -38,9 +66,9 @@
             <li>Requires less installation space.</li>
             <li>Suitable for residential and commercial use.</li>
            </ul>
-           <img src="../assets/images/products/t1.png">
+           <div class="type-img-wrap"><img src="../assets/images/products/t1.png" alt="Product Type"></div>
         </div>
-        <div class="box2">
+        <div class="type-card">
             <h3>2. Polycrystalline Solar Panel</h3>
             <ul>
                 <li>Made from multiple silicon crystals.</li>
@@ -49,9 +77,9 @@
                 <li>Generally more affordable than monocrystalline panels.</li>
                 <li>Suitable for homes and agricultural applications.</li>
             </ul>
-            <img src="../assets/images/products/t2.jpg">
+            <div class="type-img-wrap"><img src="../assets/images/products/t2.jpg" alt="Product Type"></div>
         </div>
-        <div class="box2">
+        <div class="type-card">
              <h3>3. Thin-Film Solar Panel</h3>
              <ul>
                 <li>Made using thin layers of photovoltaic materials.</li>
@@ -59,9 +87,9 @@
                 <li>Generally lower efficiency (approximately 10–19%, depending on technology).</li>
                 <li>Suitable for large surfaces and special installations.</li>
              </ul>
-             <img src="../assets/images/products/t3.webp">
+             <div class="type-img-wrap"><img src="../assets/images/products/t3.webp" alt="Product Type"></div>
         </div>
-        <div class="box2">
+        <div class="type-card">
             <h3>4. Bifacial Solar Panel</h3>
             <ul>
                 <li>Generates electricity from both front and rear sides.</li>
@@ -69,11 +97,12 @@
                 <li>Offers additional energy generation depending on installation conditions.</li>
                 <li>Suitable for solar farms and commercial projects.</li>
             </ul>
-            <img src="../assets/images/products/t4.jpeg">
+            <div class="type-img-wrap"><img src="../assets/images/products/t4.jpeg" alt="Product Type"></div>
         </div>
+</div>
          <h3>Solar Panel Overview</h3>
 
-<table border="1" cellpadding="10" cellspacing="0">
+<div class="table-responsive"><table>
     <tr>
         <th>Parameter</th>
         <th>Details</th>
@@ -118,11 +147,11 @@
         <td>Lifespan</td>
         <td>Generally 25–30 years or more</td>
     </tr>
-</table>
+</table></div>
       
      <h3>Technical Specifications</h3>
      
-<table border="1" cellpadding="10" cellspacing="0">
+<div class="table-responsive"><table>
     <tr>
         <th>Specification</th>
         <th>Typical Value</th>
@@ -182,7 +211,7 @@
         <td>Front Glass</td>
         <td>Tempered Glass</td>
     </tr>
-</table>
+</table></div>
      
     <h3>Main Features</h3>
     <ol>
@@ -233,7 +262,7 @@
 
 <p>Solar panel manufacturers generally provide two types of warranties:</p>
 
-<table border="1" cellpadding="10" cellspacing="0">
+<div class="table-responsive"><table>
     <tr>
         <th>Warranty Type</th>
         <th>Typical Period</th>
@@ -251,7 +280,7 @@
         <td>25–30 years</td>
         <td>Minimum guaranteed power output over time</td>
     </tr>
-</table>
+</table></div>
 
 <h3>Performance Warranty Example</h3>
 
@@ -283,10 +312,14 @@
 </ul>
 
     </div>
+</section>
 
-    <div class="box1" id="solar-inverter">
-        <h1>Solar Inverters</h1>
-        <img src="../assets/images/products/t5.jpg">
+    <section class="product-detail-section" id="solar-inverter">
+    <div class="product-detail-header">
+        <h2><i class="fa-solid fa-bolt"></i> Solar Inverters</h2>
+        <span class="category-tag">Power Conversion</span>
+    </div>
+        <div class="type-img-wrap"><img src="../assets/images/products/t5.jpg" alt="Product Type"></div>
 
 
 <h3>Overview</h3>
@@ -298,7 +331,7 @@
 
 <p>Solar inverter technical specifications depend on the manufacturer, model and application. A typical residential solar inverter has a rated output capacity ranging from 1 kW to 10 kW. Modern solar inverters offer conversion efficiency between 95% and 99%. They are equipped with MPPT technology to optimize solar energy generation. They also include electrical protection features, cooling systems and monitoring facilities to ensure safe and efficient operation.</p>
 
-<table border="1" cellpadding="10" cellspacing="0">
+<div class="table-responsive"><table>
     <tr>
         <th>Specification</th>
         <th>Typical Value</th>
@@ -355,7 +388,7 @@
         <td>Display</td>
         <td>LCD / LED Display</td>
     </tr>
-</table>
+</table></div>
 
 
 <h3>Main Features</h3>
@@ -393,7 +426,7 @@
 
 <p>Solar inverter manufacturers generally provide a product warranty that covers manufacturing defects, component failures and certain technical issues. The standard warranty period typically ranges from 5 to 10 years, depending on the manufacturer and inverter model. Some manufacturers also offer extended warranty options of 15 to 20 years. Warranty coverage and conditions vary between manufacturers.</p>
 
-<table border="1" cellpadding="10" cellspacing="0">
+<div class="table-responsive"><table>
     <tr>
         <th>Warranty Type</th>
         <th>Typical Period</th>
@@ -409,7 +442,7 @@
         <td>15–20 years (if available)</td>
         <td>Additional protection according to manufacturer terms</td>
     </tr>
-</table>
+</table></div>
 
 <h3>Warranty Conditions</h3>
 
@@ -444,10 +477,14 @@
 <p>Solar inverters are essential components of solar power systems because they convert DC electricity generated by solar panels into usable AC electricity. Their high conversion efficiency, smart monitoring capabilities, safety features and battery compatibility make them an important part of modern renewable energy systems. Solar inverters help improve energy utilization, reduce electricity expenses and support sustainable energy development.</p>
 
     </div>
+</section>
 
-    <div class="box1" id="solar-battery">
-        <h1>Solar Batteries</h1>
-        <img src="../assets/images/products/t6.jpg">
+    <section class="product-detail-section" id="solar-battery">
+    <div class="product-detail-header">
+        <h2><i class="fa-solid fa-car-battery"></i> Solar Batteries</h2>
+        <span class="category-tag">Energy Storage</span>
+    </div>
+        <div class="type-img-wrap"><img src="../assets/images/products/t6.jpg" alt="Product Type"></div>
 
 
 <h3>Overview</h3>
@@ -459,7 +496,7 @@
 
 <p>Solar battery specifications depend on the manufacturer, battery technology and model. A typical residential solar battery may have a nominal voltage of 12 V, 24 V, 48 V or higher, with storage capacities ranging from 100 Ah to 300 Ah. Battery energy capacity is measured in kilowatt-hours (kWh). Modern lithium-ion solar batteries generally offer a depth of discharge of approximately 80% to 95% and a longer cycle life compared to conventional lead-acid batteries. Other important specifications include charging voltage, discharging current, operating temperature, battery management system and protection features.</p>
 
-<table border="1" cellpadding="10" cellspacing="0">
+<div class="table-responsive"><table>
     <tr>
         <th>Specification</th>
         <th>Typical Value</th>
@@ -516,7 +553,7 @@
         <td>Installation</td>
         <td>Indoor / Outdoor (Model dependent)</td>
     </tr>
-</table>
+</table></div>
 
 
 <h3>Main Features</h3>
@@ -554,7 +591,7 @@
 
 <p>Solar battery manufacturers generally provide product warranties that cover manufacturing defects, material failures and battery performance according to the manufacturer's terms and conditions. Lithium-ion solar batteries commonly come with warranties ranging from 5 to 10 years, while lead-acid battery warranties may vary depending on the product and usage conditions. Some manufacturers also provide performance or energy-throughput guarantees based on the battery's capacity, operating conditions and charging cycles. Actual warranty coverage depends on the manufacturer and model.</p>
 
-<table border="1" cellpadding="10" cellspacing="0">
+<div class="table-responsive"><table>
     <tr>
         <th>Warranty Type</th>
         <th>Typical Period</th>
@@ -570,7 +607,7 @@
         <td>5–10 years (where offered)</td>
         <td>Guaranteed capacity retention or energy throughput under specified conditions</td>
     </tr>
-</table>
+</table></div>
 
 <h3>Warranty Conditions</h3>
 
@@ -604,10 +641,14 @@
 <p>Solar batteries are important components of solar energy systems because they store excess electricity generated by solar panels and make it available when required. They provide backup power, improve energy utilization and reduce dependence on conventional electricity sources. With their energy storage capabilities, long cycle life and compatibility with modern solar systems, solar batteries play an important role in residential, commercial, industrial and agricultural applications. They support reliable electricity supply and promote the use of clean and renewable energy.</p>
 
     </div>
+</section>
 
-    <div class="box1" id="solar-water-heater">
-        <h1>Solar Water Heater</h1>
-        <img src="../assets/images/products/t7.jpg">
+    <section class="product-detail-section" id="solar-water-heater">
+    <div class="product-detail-header">
+        <h2><i class="fa-solid fa-temperature-arrow-up"></i> Solar Water Heaters</h2>
+        <span class="category-tag">Solar Thermal</span>
+    </div>
+        <div class="type-img-wrap"><img src="../assets/images/products/t7.jpg" alt="Product Type"></div>
 
 
 <h3>Overview</h3>
@@ -619,7 +660,7 @@
 
 <p>Solar water heater specifications depend on the manufacturer, collector technology and system capacity. A typical residential solar water heater may have a storage capacity ranging from 100 to 300 litres per day. It generally uses solar collectors with an absorber surface designed to capture maximum solar radiation. Water heating performance depends on sunlight availability, ambient temperature, collector efficiency and storage tank insulation. The system may include an insulated storage tank, corrosion-resistant components, connecting pipes, temperature control arrangements and safety valves. Actual specifications vary according to the model and installation requirements.</p>
 
-<table border="1" cellpadding="10" cellspacing="0">
+<div class="table-responsive"><table>
     <tr>
         <th>Specification</th>
         <th>Typical Value</th>
@@ -676,7 +717,7 @@
         <td>Backup Heating</td>
         <td>Electric / Auxiliary Heating (Optional)</td>
     </tr>
-</table>
+</table></div>
 
 
 <h3>Main Features</h3>
@@ -714,7 +755,7 @@
 
 <p>Solar water heater manufacturers generally provide warranties covering manufacturing defects, storage tank performance, solar collectors and other major system components. The warranty period varies according to the manufacturer, product model and materials used. Many manufacturers offer product warranties ranging from 5 to 10 years, while certain components may have different warranty periods. Warranty coverage may include defects in the storage tank, collector components, insulation and associated parts according to the manufacturer's terms and conditions.</p>
 
-<table border="1" cellpadding="10" cellspacing="0">
+<div class="table-responsive"><table>
     <tr>
         <th>Warranty Type</th>
         <th>Typical Period</th>
@@ -735,7 +776,7 @@
         <td>5–10 years (Model dependent)</td>
         <td>Collector-related manufacturing defects</td>
     </tr>
-</table>
+</table></div>
 
 <h3>Warranty Conditions</h3>
 
@@ -770,10 +811,14 @@
 <p>Solar water heaters are energy-efficient systems that use sunlight to provide hot water for residential, commercial and industrial requirements. They help reduce electricity consumption, lower operating expenses and promote the use of renewable energy. Their insulated storage tanks, efficient solar collectors and low maintenance requirements make them a practical solution for daily hot water needs. Solar water heaters contribute to energy conservation, environmental protection and sustainable development.</p>
 
     </div>
+</section>
 
-    <div class="box1" id="solar-accessory">
-        <h1>Solar Accessories</h1>
-        <img src="../assets/images/products/t8.webp">
+    <section class="product-detail-section" id="solar-accessory">
+    <div class="product-detail-header">
+        <h2><i class="fa-solid fa-screwdriver-wrench"></i> Solar Accessories</h2>
+        <span class="category-tag">Installation & Gear</span>
+    </div>
+        <div class="type-img-wrap"><img src="../assets/images/products/t8.webp" alt="Product Type"></div>
 
 
 <h3>Overview</h3>
@@ -785,7 +830,7 @@
 
 <p>Solar accessory specifications vary depending on the component, manufacturer and solar system requirements. Solar cables are generally designed to withstand outdoor conditions and carry DC electricity safely. Connectors provide secure electrical connections between solar panels and other system components. Mounting structures are manufactured using aluminium or galvanized steel to provide strong support. Protection devices such as fuses, circuit breakers and surge protection devices help protect the system against electrical faults and voltage surges. Other accessories include charge controllers, earthing kits and monitoring equipment that improve system functionality and safety.</p>
 
-<table border="1" cellpadding="10" cellspacing="0">
+<div class="table-responsive"><table>
     <tr>
         <th>Specification</th>
         <th>Typical Value / Details</th>
@@ -838,7 +883,7 @@
         <td>Installation</td>
         <td>Indoor / Outdoor</td>
     </tr>
-</table>
+</table></div>
 
 
 <h3>Main Features</h3>
@@ -876,7 +921,7 @@
 
 <p>Solar accessory manufacturers generally provide product warranties depending on the accessory type, material quality and manufacturer. Warranty coverage may include manufacturing defects, material failures and certain component-related issues. Electrical accessories, mounting structures, connectors and monitoring devices may have different warranty periods. The warranty generally depends on proper installation, usage conditions and compliance with manufacturer guidelines.</p>
 
-<table border="1" cellpadding="10" cellspacing="0">
+<div class="table-responsive"><table>
     <tr>
         <th>Warranty Type</th>
         <th>Typical Period</th>
@@ -897,7 +942,7 @@
         <td>1–5 years (Model dependent)</td>
         <td>Component defects and electrical failures</td>
     </tr>
-</table>
+</table></div>
 
 <h3>Warranty Conditions</h3>
 
@@ -931,9 +976,13 @@
 
 <p>Solar accessories play an important role in the installation, protection and operation of solar power systems. They provide electrical connections, mechanical support and safety protection for solar panels, inverters and batteries. Their durable construction, weather resistance and compatibility with different solar components help improve the overall reliability and performance of solar installations. Solar accessories are essential for residential, commercial, industrial and agricultural solar projects.</p>
 
-    </div>
-      <!-- Footer Component -->
-        <div id="footer"></div>
+                </div>
+        </div>
+</section>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
 
 
         <!-- JavaScript Files -->

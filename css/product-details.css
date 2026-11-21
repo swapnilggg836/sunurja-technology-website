@@ -1,20 +1,369 @@
-.box1{
-  background-color:#eafbea;
-   h1,h2,h3{
-        color:#14532d
-    }
-     img{
-        width:500px;
-        height:400px;
-    }
+/* =========================================
+   SUNURJA TECHNOLOGY
+   PRODUCT DETAILS STYLESHEET
+   ========================================= */
+
+/* Hero Header */
+.details-hero {
+    position: relative;
+    padding: 85px 0 75px;
+    background: linear-gradient(135deg, rgba(9, 28, 16, 0.95) 0%, rgba(20, 43, 27, 0.9) 100%),
+        url("../assets/images/home/images/hero-solar.jpg") center/cover no-repeat;
+    text-align: center;
+    color: var(--white);
+    border-bottom: 3px solid var(--primary);
 }
-.box2{
-    img{
-        width:400px;
-        height:400px;
-    }
-    h1,h2,h3{
-        color:#14532d
+
+.details-hero-content {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.details-hero .section-label {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.details-hero h1 {
+    color: var(--white);
+    font-size: clamp(34px, 4.5vw, 50px);
+    margin-bottom: 15px;
+}
+
+.details-hero h1 span {
+    color: var(--primary);
+}
+
+.details-hero p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Sticky Navigation Sub-Bar */
+.product-nav-bar {
+
+    top: 85px;
+    z-index: 990;
+    background: #ffffff;
+    border-bottom: 2px solid var(--border);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: top 0.25s ease;
+}
+
+.site-header.scrolled~main .product-nav-bar {
+    top: 75px;
+}
+
+.product-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.product-nav-list::-webkit-scrollbar {
+    display: none;
+    /* Chrome */
+}
+
+.product-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--secondary);
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    white-space: nowrap;
+    transition: all 0.25s ease;
+}
+
+.product-nav-link:hover,
+.product-nav-link.active {
+    background: var(--primary);
+    color: var(--secondary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Product Section Card Block */
+.details-container {
+    padding: 60px 0 90px;
+    background: var(--light-bg);
+}
+
+.product-detail-section {
+    background: var(--white);
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    padding: 45px 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(20, 43, 27, 0.05);
+    scroll-margin-top: 175px;
+    /* Clean gap below sticky header + sub-nav */
+}
+
+.section-intro {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 25px;
+    max-width: 850px;
+}
+
+.product-detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 22px;
+    border-bottom: 2px solid var(--light-bg);
+    margin-bottom: 35px;
+}
+
+.product-detail-header h2 {
+    font-size: 32px;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.product-detail-header h2 i {
+    color: var(--primary-dark);
+}
+
+.category-tag {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(87, 225, 87, 0.4);
+}
+
+/* Sub-Headings */
+.product-detail-section h3 {
+    font-size: 22px;
+    color: var(--secondary);
+    margin: 35px 0 18px;
+    position: relative;
+    padding-left: 14px;
+}
+
+.product-detail-section h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 4px;
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+/* Types Grid (Types of Panels, Inverters, etc.) */
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 35px;
+}
+
+.type-card {
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.type-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 25px rgba(20, 43, 27, 0.08);
+}
+
+.type-card h4 {
+    font-size: 18px;
+    color: var(--secondary);
+    margin-bottom: 14px;
+}
+
+.type-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    flex: 1;
+}
+
+.type-card ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.type-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-dark);
+    font-weight: bold;
+}
+
+.type-img-wrap {
+    width: 100%;
+    height: 190px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--border);
+}
+
+.type-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.type-card:hover .type-img-wrap img {
+    transform: scale(1.06);
+}
+
+/* Feature List (Ordered & Unordered) */
+.product-detail-section ol,
+.product-detail-section>ul {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.product-detail-section ol li,
+.product-detail-section>ul li {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.product-detail-section ol li strong,
+.product-detail-section>ul li strong {
+    color: var(--secondary);
+}
+
+/* Technical Specification & Overview Tables */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 30px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.product-detail-section table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    text-align: left;
+    font-size: 14px;
+}
+
+.product-detail-section table th {
+    background: var(--secondary);
+    color: var(--white);
+    padding: 14px 20px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.product-detail-section table td {
+    padding: 13px 20px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+}
+
+.product-detail-section table tr:nth-child(even) td {
+    background: var(--light-bg);
+}
+
+.product-detail-section table tr:hover td {
+    background: rgba(87, 225, 87, 0.08);
+}
+
+.product-detail-section table td:first-child {
+    font-weight: 600;
+    color: var(--secondary);
+    width: 35%;
+}
+
+/* Conclusion & Summary Box */
+.detail-summary-box {
+    background: var(--primary-light);
+    border-left: 4px solid var(--primary-dark);
+    padding: 22px 26px;
+    border-radius: 0 16px 16px 0;
+    margin-top: 30px;
+}
+
+.detail-summary-box h4 {
+    color: var(--secondary);
+    font-size: 17px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-summary-box p {
+    color: var(--secondary);
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .product-detail-section {
+        padding: 35px 25px;
     }
 
+    .product-detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .details-hero {
+        padding: 65px 0 50px;
+    }
+
+    .product-detail-section {
+        padding: 25px 18px;
+        border-radius: 16px;
+    }
+
+    .product-detail-header h2 {
+        font-size: 24px;
+    }
+
+    .types-grid {
+        grid-template-columns: 1fr;
+    }
 }

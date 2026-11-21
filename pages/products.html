@@ -3,68 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | Sunurja Technology</title>
+    <title>Solar Energy Products | Sunurja Technology</title>
+    <meta name="description" content="Explore high-efficiency solar panels, intelligent inverters, energy storage batteries, solar water heaters, and certified accessories by Sunurja Technology.">
+
     <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
-            rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-        <!-- CSS Files -->
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/navbar.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/home.css">
-        <link rel="stylesheet" href="../css/responsive.css">
-
-        <!-- Font Awesome Icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
- <!-- Navbar Component -->
-        <div id="navbar"></div>
-    <div class="box1">
-    <h1>Products</h1>
-    </div>
-    <div class="box3">
-    <div class="box2">
-        <h2>Solar Panels</h2>
-        <img src="../assets/images/products/i1.jpg">
-        <a href="product-details.html#solar-panel"><h3>view details</h3></a>
-    </div>
-    <div class="box2">
-        <h2>Solar Inverters</h2>
-        <img src="../assets/images/products/i2.jpg">
-        <a href="product-details.html#solar-inverter"><h3>view details</h3></a>
-    </div>
-    <div class="box2">
-        <h2>Solar Batteries</h2>
-        <img src="../assets/images/products/i3.avif">
-        <a href="product-details.html#solar-battery"><h3>view details</h3></a>
-    </div>
-    <div class="box2">
-        <h2> Solar Water Heaters</h2>
-        <img src="../assets/images/products/i4.avif">
-        <a href="product-details.html#solar-water-heater"><h3>view details</h3></a>
-    </div>
-    <div class="box2">
-        <h2>Solar Accessories</h2>
-        <img src="../assets/images/products/i5.webp">
-        <a href="product-details.html#solar-accessory"><h3>view details</h3></a>
-    </div>
 
-    </div>
-      <!-- Footer Component -->
-        <div id="footer"></div>
+    <!-- Navbar Component -->
+    <div id="navbar"></div>
 
+    <main>
+        <!-- Hero Banner -->
+        <section class="products-hero">
+            <div class="container products-hero-content">
+                <span class="section-label">PREMIUM SOLAR PRODUCTS</span>
+                <h1>Engineered for <span>Maximum Clean Energy</span></h1>
+                <p>Discover our comprehensive range of high-efficiency solar panels, smart inverters, reliable battery storage, and complete solar solutions for residential, commercial, and industrial use.</p>
+            </div>
+        </section>
 
-        <!-- JavaScript Files -->
-        <script src="../js/navbar.js" defer></script>
-        <script src="../js/footer.js" defer></script>
-        <script src="../js/main.js" defer></script>
-        <script src="../js/animations.js" defer></script>
+        <!-- Product Listing Section -->
+        <section class="products-section">
+            <div class="container">
+                <div class="products-grid">
+
+                    <!-- Product 1: Solar Panels -->
+                    <article class="product-card">
+                        <div class="product-card-img-wrap">
+                            <span class="product-badge">Top Efficiency</span>
+                            <img src="../assets/images/products/i1.jpg" alt="High Efficiency Solar Panels">
+                        </div>
+                        <div class="product-card-body">
+                            <h2>Solar Panels</h2>
+                            <p>Monocrystalline, Polycrystalline, Thin-Film, and Bifacial panels delivering superior conversion efficiency and durable 25+ year operational lifespans.</p>
+                            <a href="product-details.html#solar-panel" class="product-view-btn">
+                                <span>View Technical Details</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Product 2: Solar Inverters -->
+                    <article class="product-card">
+                        <div class="product-card-img-wrap">
+                            <span class="product-badge">Smart Conversion</span>
+                            <img src="../assets/images/products/i2.jpg" alt="Intelligent Solar Inverters">
+                        </div>
+                        <div class="product-card-body">
+                            <h2>Solar Inverters</h2>
+                            <p>Advanced On-Grid, Off-Grid, and Hybrid inverters equipped with smart MPPT tracking, pure sine wave output, and real-time remote mobile monitoring.</p>
+                            <a href="product-details.html#solar-inverter" class="product-view-btn">
+                                <span>View Technical Details</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Product 3: Solar Batteries -->
+                    <article class="product-card">
+                        <div class="product-card-img-wrap">
+                            <span class="product-badge">Deep Cycle Storage</span>
+                            <img src="../assets/images/products/i3.avif" alt="Solar Energy Storage Batteries">
+                        </div>
+                        <div class="product-card-body">
+                            <h2>Solar Batteries</h2>
+                            <p>Lithium-ion and heavy-duty tubular lead-acid batteries providing high cycle durability, fast charging, and dependable energy security during power cuts.</p>
+                            <a href="product-details.html#solar-battery" class="product-view-btn">
+                                <span>View Technical Details</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Product 4: Solar Water Heaters -->
+                    <article class="product-card">
+                        <div class="product-card-img-wrap">
+                            <span class="product-badge">Thermal Energy</span>
+                            <img src="../assets/images/products/i4.avif" alt="Solar Thermal Water Heaters">
+                        </div>
+                        <div class="product-card-body">
+                            <h2>Solar Water Heaters</h2>
+                            <p>ETC (Evacuated Tube Collector) and FPC (Flat Plate Collector) systems built with heavy-gauge insulated tanks for efficient domestic and industrial water heating.</p>
+                            <a href="product-details.html#solar-water-heater" class="product-view-btn">
+                                <span>View Technical Details</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Product 5: Solar Accessories -->
+                    <article class="product-card">
+                        <div class="product-card-img-wrap">
+                            <span class="product-badge">Certified Gear</span>
+                            <img src="../assets/images/products/i5.webp" alt="Solar Mounting Structures and Accessories">
+                        </div>
+                        <div class="product-card-body">
+                            <h2>Solar Accessories</h2>
+                            <p>UV-resistant solar DC cables, MC4 connectors, heavy-duty anodized aluminium mounting structures, AC/DC combiner distribution boxes, and lightning arresters.</p>
+                            <a href="product-details.html#solar-accessory" class="product-view-btn">
+                                <span>View Technical Details</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <!-- JavaScript Files -->
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/footer.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/animations.js" defer></script>
 </body>
 </html>
