@@ -29,32 +29,23 @@
 .footer-logo {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    color: #ffffff;
-    font-family: var(--font-heading);
-    font-size: 23px;
-    font-weight: 700;
     margin-bottom: 20px;
+    background: #ffffff;
+    padding: 6px 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
 }
 
 .footer-logo:hover {
-    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(87, 225, 87, 0.25);
 }
 
-.site-footer .logo-icon {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--primary);
-    color: var(--secondary);
-    border-radius: 12px;
-    font-size: 21px;
-}
-
-.logo-highlight {
-    color: var(--primary);
+.footer-logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
 }
 
 .footer-about>p {

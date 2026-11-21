@@ -44,45 +44,17 @@
 .navbar-logo {
     display: flex;
     align-items: center;
-    gap: 11px;
     flex-shrink: 0;
 }
 
-.logo-icon {
-    width: 48px;
+.navbar-logo-img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+.site-header.scrolled .navbar-logo-img {
     height: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--primary);
-    color: var(--secondary);
-
-    border-radius: 13px;
-    font-size: 24px;
-}
-
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-}
-
-.logo-name {
-    font-family: var(--font-heading);
-    font-size: 23px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: var(--secondary);
-}
-
-.logo-tagline {
-    margin-top: 5px;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    color: var(--primary-dark);
 }
 
 
@@ -355,19 +327,8 @@
 
 @media (max-width: 480px) {
 
-    .logo-icon {
-        width: 42px;
+    .navbar-logo-img {
         height: 42px;
-        font-size: 21px;
-    }
-
-    .logo-name {
-        font-size: 20px;
-    }
-
-    .logo-tagline {
-        font-size: 9px;
-        letter-spacing: 3px;
     }
 
 }
