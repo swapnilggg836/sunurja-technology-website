@@ -1,0 +1,233 @@
+/* =========================================
+   SUNURJA TECHNOLOGY - FOOTER
+========================================= */
+
+.site-footer {
+    background: var(--secondary);
+    color: #ffffff;
+    margin-top: 0;
+}
+
+/* Main Footer */
+
+.footer-main {
+    padding: 75px 0 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: 45px;
+}
+
+/* Company Information */
+
+.footer-about {
+    max-width: 330px;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-logo:hover {
+    color: #ffffff;
+}
+
+.site-footer .logo-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.logo-highlight {
+    color: var(--primary);
+}
+
+.footer-about>p {
+    color: #c1ccc3;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+}
+
+/* Social Media */
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.footer-socials a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.footer-socials a:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    transform: translateY(-4px);
+}
+
+/* Footer Columns */
+
+.footer-column h3 {
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-column h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 38px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 13px;
+}
+
+.footer-column ul li a {
+    color: #c1ccc3;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+/* Contact Details */
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 17px;
+}
+
+.footer-contact-item i {
+    color: var(--primary);
+    font-size: 16px;
+    margin-top: 4px;
+    min-width: 17px;
+}
+
+.footer-contact-item p,
+.footer-contact-item a {
+    color: #c1ccc3;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.footer-contact-item a:hover {
+    color: var(--primary);
+}
+
+/* Footer Bottom */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 22px 0;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #aab7ad;
+    font-size: 13px;
+    margin: 0;
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-legal-links a {
+    color: #aab7ad;
+    font-size: 13px;
+    transition: var(--transition);
+}
+
+.footer-legal-links a:hover {
+    color: var(--primary);
+}
+
+/* Responsive Footer */
+
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .footer-about {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-main {
+        padding: 55px 0 40px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-legal-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
